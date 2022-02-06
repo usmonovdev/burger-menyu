@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 200px;
+    height: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.bir{
+    width: 200px;
+    height: 30px;
+    background: rgb(80, 80, 80);
+    border-radius: 6px;
+    transition: 80ms;
+}
+
+.container:hover .bir{
+    width: 160px;
+    height: 40px;
+    border: 18px solid rgb(46, 46, 46);
+    background: none;
+    border-radius: 120px 120px 60px 60px;
+}
+
+.bir::before{
+    content: "";
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    top: 70px;
+    left: 80px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: rgb(46, 46, 46);
+    transform: rotate(180deg);
+    border-radius: 6px;
+    display: none;
+    transition: 80ms;
+}
+
+.container:hover .bir::before{
+    display: block;
+}
+
+.bir span{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgb(46, 46, 46);
+    position: relative;
+    top: 20px;
+    left: 50px;
+    display: none;
+    transition: 80ms;
+}
+
+.container:hover .bir span{
+    display: inline-block;
+}
+
+.bir span:nth-child(1){
+    top: 15px;
+    left: 25px;
+}
+
+.bir span:nth-child(2){
+    top: 5px;
+    left: 60px;
+}
+
+.bir span:nth-child(3){
+    top: 15px;
+    left: 95px;
+}
+
+.ikki{
+    width: 200px;
+    height: 30px;
+    background: rgb(80, 80, 80);
+    border-radius: 6px;
+    margin-top: 30px;
+    transition: 80ms;
+}
+
+.container:hover .ikki{
+    width: 180px;
+    height: 25px;
+    border: 18px solid rgb(46, 46, 46);
+    border-radius: 40px;
+    margin-top: -16px;
+    margin-left: -9px;
+    background: none;
+}
+
+.uch{
+    width: 200px;
+    height: 30px;
+    background: rgb(80, 80, 80);
+    border-radius: 6px;
+    margin-top: 30px;
+    transition: 80ms;
+}
+
+.container:hover .uch{
+    width: 150px;
+    height: 25px;
+    border: 18px solid rgb(46, 46, 46);
+    border-radius: 20px 20px 40px 40px;
+    margin-top: -16px;
+    margin-left: 6px;
+    background: none;
+}
